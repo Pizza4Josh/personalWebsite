@@ -4,19 +4,113 @@ Date:       27.02.2026
 Message:    Why hello there! 
 */
 
+h1 {
+    margin-top: 60px;
+}
+
 main {
-    margin-left: 160px; /* leave space for sidebar */
+    margin-left: 12%; /* leave space for sidebar */
     padding: 10px;
     text-align: center;
     font-family:'Courier New', Courier, monospace;
 }
 
 .profile_img {
+    margin-top: 40px;
     width: 375px;
     height: 450px; 
     border-radius: 35%;
+    margin-bottom: 40px;
 }
 
+.home-links {
+    display: flex;
+    gap: 40px;
+}
+
+
+.home-section {
+    max-width: 900px;
+    margin: 0 auto 20px;
+    text-align: left;
+}
+
+.home-section h2 {
+    font-size: 20px;
+    color: #555555;
+    margin-bottom: 20px;
+}
+
+.home-projects {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.home-project-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+    color: inherit;
+    border: 2px solid #555555;
+    border-radius: 10px;
+    padding: 12px;
+    transition: background 0.2s;
+}
+
+.home-project-card:hover { background: #f5f5f5; }
+
+.home-project-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+
+.home-project-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.home-project-title { font-size: 16px; font-weight: bold; }
+
+.home-project-desc { font-size: 13px; color: #777; }
+
+.home-all-projects {
+    font-size: 12px;
+    color: #555555;
+    text-decoration: none;
+}
+
+.home-all-projects:hover { color: #000; border-color: #000; }
+
+.home-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.home-skill {
+    border: 2px solid #555555;
+    border-radius: 20px;
+    padding: 5px 14px;
+    font-size: 14px;
+    color: #555555;
+}
+
+.home-contact p {
+    font-size: 15px;
+    margin-bottom: 0;
+}
+
+
+
+
+/* Navigation bar */
 .sidebar {
     display: flex;
     flex-direction: column;
@@ -29,10 +123,11 @@ main {
     box-sizing: border-box;
 }
 
-.sidebar button {
+.sidebar_button {
     /* color: #fff; */
+    text-decoration: none;
     height: 12%;
-    width: 100%;
+    width: calc(100% - 4px);
     cursor: pointer;
     display: flex;
     flex-direction: column;
@@ -41,11 +136,11 @@ main {
     gap: 5px;
     /* background-color: #555555; */
     font-size: 17.5px;
-    border: 2px, solid, #555555;
+    border: 2px solid #555555;
     font-family:'Courier New', Courier, monospace;
 }
 
-.sidebar button + button {
+.sidebar_button + .sidebar_button {
     border-top: none; /* prevents doubled borders */
 }
 
@@ -69,10 +164,54 @@ main {
 }
 
 
-/* Project buttons */
-#projects p {
-    margin-bottom: 60px;
+
+/* Highlight buttons when hovering */
+#page-home     .sidebar_button[href="home.html"],
+#page-projects .sidebar_button[href="projects.html"],
+#page-blog     .sidebar_button[href="blog.html"] {
+    background-color: #ffffff;
+    color: #555;
 }
+
+.sidebar_button:hover {
+    background-color: #ffffff;
+    color: #555;
+}
+
+#page-home     .sidebar_button[href="home.html"] .icons,
+.sidebar_button[href="home.html"]:hover .icons {
+    content: url("Photos/Home dark.png");
+}
+
+#page-projects .sidebar_button[href="projects.html"] .icons,
+.sidebar_button[href="projects.html"]:hover .icons {
+    content: url("Photos/Spanner dark.png");
+}
+
+/* Duplicate for files in /Projects folder */
+#page-blog     .sidebar_button[href="blog.html"] .icons,
+.sidebar_button[href="blog.html"]:hover .icons {
+    content: url("Photos/Blog dark.png");
+}
+
+#page-home     .sidebar_button[href="../home.html"] .icons,
+.sidebar_button[href="../home.html"]:hover .icons {
+    content: url("../Photos/Home dark.png");
+}
+
+#page-projects .sidebar_button[href="../projects.html"] .icons,
+.sidebar_button[href="../projects.html"]:hover .icons {
+    content: url("../Photos/Spanner dark.png");
+}
+
+#page-blog     .sidebar_button[href="../blog.html"] .icons,
+.sidebar_button[href="../blog.html"]:hover .icons {
+    content: url("../Photos/Blog dark.png");
+}
+
+
+
+/* Project buttons */
 
 .grid {
     display: grid;
@@ -119,4 +258,149 @@ main {
     padding: 10px 6px;
     text-align: center;
     font-family:'Courier New', Courier, monospace;
+}
+
+
+
+/* Project */
+/* Project entry page */
+.project-entry {
+    text-align: left;
+    max-width: 900px;
+    margin: 30px auto 0;
+    padding: 0 20px;
+}
+
+.project-dates {
+    display: flex;
+    gap: 40px;
+    border-left: 4px solid #000000;
+    padding-left: 15px;
+    margin-bottom: 40px;
+    font-size: 15px;
+}
+
+.project-overview {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.project-text {
+    flex: 1;
+}
+
+.project-img-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.project-img {
+    width: 280px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid #555555;
+}
+
+.project-img-caption {
+    font-size: 12px;
+    color: #888;
+    margin-top: 6px;
+}
+
+.project-section {
+    margin-bottom: 35px;
+    border-left: 4px solid #000000;
+    padding-left: 15px;
+}
+
+.project-entry h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #555555;
+}
+
+.project-entry ul {
+    margin: 0;
+    padding-left: 20px;
+    line-height: 2;
+}
+
+
+/* Carousel */
+.carousel {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.carousel-window {
+    position: relative;
+    width: 70%;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 2px solid #555555;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.4s ease;
+}
+
+.carousel-img {
+    min-width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+.carousel-arrow {
+    position: absolute;
+    top: 37.5%;
+    background: none;
+    color: #555555;
+    border: none;
+    font-size: 80px;
+    width: 45px;
+    height: 45px;
+    /* border-radius: 50%; */
+    cursor: pointer;
+}
+
+.carousel-arrow:hover { color: #999999; }
+.carousel-arrow.left  { left: 10px; }
+.carousel-arrow.right { right: 10px; }
+
+.carousel-dots {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ccc;
+    cursor: pointer;
+    /* transition: background 0.2s; */
+}
+
+.dot.active { background: #555555; }
+
+.carousel-caption {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    font-size: 14px;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 8px 14px;
+    text-align: center;
 }
