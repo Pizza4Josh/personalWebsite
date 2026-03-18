@@ -11,6 +11,12 @@ main {
     font-family:'Courier New', Courier, monospace;
 }
 
+.profile_img {
+    width: 375px;
+    height: 450px; 
+    border-radius: 35%;
+}
+
 .sidebar {
     display: flex;
     flex-direction: column;
@@ -24,7 +30,7 @@ main {
 }
 
 .sidebar button {
-    color: #fff;
+    /* color: #fff; */
     height: 12%;
     width: 100%;
     cursor: pointer;
@@ -33,19 +39,84 @@ main {
     justify-content: center;
     align-items: center;
     gap: 5px;
-    background-color: #555555;
+    /* background-color: #555555; */
     font-size: 17.5px;
-    border: none;
+    border: 2px, solid, #555555;
     font-family:'Courier New', Courier, monospace;
 }
 
-.sidebar button:hover {
-    background-color: #fff;
+.sidebar button + button {
+    border-top: none; /* prevents doubled borders */
+}
+
+.light {
+    background-color: #ffffff;
     color: #555;
 }
 
+.dark {
+    background-color: #555555;
+    color: #fff;
+}
+
+.hidden {
+    display: none;
+}
 
 .icons {
     height: 30px;
     width: 30px;
+}
+
+
+/* Project buttons */
+#projects p {
+    margin-bottom: 60px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+    max-width: 1000px;
+    margin: 0 auto;
+    justify-items: center;
+    /* width: fit-content; */
+  }
+
+.project_button {
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    border: 5px solid #555555;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    padding: 0;
+    background: #555555;
+}
+
+.project_button:hover { 
+    transform: scale(1.02);
+}
+
+.project_button .img {
+    width: 100%;
+    height:80%;
+    object-fit: cover;
+    display: block;
+    position:absolute;
+    top: 0;
+    left: 0;
+}
+
+.project_button .label {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    background: #555555;
+    color: #fff;
+    font-size: 17.5px;
+    padding: 10px 6px;
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
 }
