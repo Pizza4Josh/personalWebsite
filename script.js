@@ -4,67 +4,6 @@
 // Message:    Why hello there! 
 //
 
-
-// // Change color of images on navigation buttons
-// const home_button = document.getElementById("home_button")
-// const home_img = document.getElementById("home_img")
-// const projects_button = document.getElementById("projects_button")
-// const projects_img = document.getElementById("projects_img")
-// const blog_button = document.getElementById("blog_button")
-// const blog_img = document.getElementById("blog_img")
-
-// localStorage.current_state = 0;
-
-// home_button.addEventListener('mouseenter', () => {
-//     if (current_state != 0) {
-//         make_light(home_button, home_img, "Photos/Home dark.png")
-//     }
-// })
-
-// home_button.addEventListener('mouseleave', () => {
-//     if (current_state != 0) {
-//         make_dark(home_button, home_img, "Photos/Home white.png")
-//     }
-// })
-
-// projects_button.addEventListener('mouseenter', () => {
-//     if (current_state != 1) {
-//         make_light(projects_button, projects_img, "Photos/Spanner dark.png")
-//     }
-// })
-
-// projects_button.addEventListener('mouseleave', () => {
-//     if (current_state != 1) {
-//         make_dark(projects_button, projects_img, "Photos/Spanner white.png")
-//     }
-// })
-
-// blog_button.addEventListener('mouseenter', () => {
-//     if (current_state != 2) {
-//         make_light(blog_button, blog_img, "Photos/Blog dark.png")
-//     }
-// })
-
-// blog_button.addEventListener('mouseleave', () => {
-//     if (current_state != 2) {
-//         make_dark(blog_button, blog_img, "Photos/Blog white.png")
-//     }
-// })
-
-
-// function make_light(button, img, img_path) {
-//     img.src = img_path;
-//     button.classList.remove('dark');
-//     button.classList.add('light');
-// }
-
-// function make_dark(button, img, img_path) {
-//     img.src = img_path;
-//     button.classList.remove('light');
-//     button.classList.add('dark')
-// }
-
-
 let current_img = 0;
 const track = document.getElementById('carousel-track');
 const dotsContainer = document.getElementById('carousel-dots');

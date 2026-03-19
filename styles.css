@@ -5,11 +5,36 @@ Message:    Why hello there!
 */
 
 h1 {
+    color: #000000;
     margin-top: 60px;
 }
 
+h2 {
+    font-size: 20px;
+    color: #000000;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.noBottomMargin {
+    margin-bottom: 0px;
+}
+
+.bottomMargin {
+    margin-bottom: 40px;
+}
+
+ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+li + li {
+    margin-top: 10px;
+}
+
 main {
-    margin-left: 12%; /* leave space for sidebar */
+    margin-left: 180px; /*leave space for sidebar*/
     padding: 10px;
     text-align: center;
     font-family:'Courier New', Courier, monospace;
@@ -24,28 +49,46 @@ main {
 }
 
 .home-links {
+    font-size: 17.5px;
     display: flex;
-    gap: 40px;
+    justify-content: center;
+    gap: 80px;
 }
 
+.home-link {
+    color:#000000;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.home-bottom {
+    max-width: 900px;
+    margin: 20px auto 0;
+    display: flex;
+    justify-content: space-between; /* left item to left edge, right item to right edge */
+    align-items: flex-start;
+    gap: 20px;
+}
 
 .home-section {
     max-width: 900px;
     margin: 0 auto 20px;
     text-align: left;
+    margin-bottom: 50px;
 }
 
-.home-section h2 {
-    font-size: 20px;
-    color: #555555;
-    margin-bottom: 20px;
+.home_list {
+    max-width: 400px;
+    border-left: 4px solid #555555;
+    padding-left: 15px;
+    text-align: left;
 }
 
 .home-projects {
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    margin-bottom: 16px;
+    gap: 15px; /* controls spacing between all children */
+    text-align: left;
 }
 
 .home-project-card {
@@ -88,27 +131,10 @@ main {
 
 .home-all-projects:hover { color: #000; border-color: #000; }
 
-.home-skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.home-skill {
-    border: 2px solid #555555;
-    border-radius: 20px;
-    padding: 5px 14px;
-    font-size: 14px;
-    color: #555555;
-}
-
 .home-contact p {
     font-size: 15px;
     margin-bottom: 0;
 }
-
-
-
 
 /* Navigation bar */
 .sidebar {
@@ -118,7 +144,7 @@ main {
     top: 0;
     left: 0;
     height: 100%;
-    width: 12%;
+    width: 180px;
     background-color: #555555;
     box-sizing: border-box;
 }
@@ -276,7 +302,8 @@ main {
     gap: 40px;
     border-left: 4px solid #000000;
     padding-left: 15px;
-    margin-bottom: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     font-size: 15px;
 }
 
@@ -312,23 +339,12 @@ main {
     margin-top: 6px;
 }
 
-.project-section {
+.list {
     margin-bottom: 35px;
-    border-left: 4px solid #000000;
+    border-left: 4px solid #555555;
     padding-left: 15px;
 }
 
-.project-entry h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
-    color: #555555;
-}
-
-.project-entry ul {
-    margin: 0;
-    padding-left: 20px;
-    line-height: 2;
-}
 
 
 /* Carousel */
