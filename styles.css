@@ -196,7 +196,7 @@ main {
 
 
 /* Highlight buttons when hovering */
-#page-home     .sidebar_button[href="home.html"],
+#page-home     .sidebar_button[href="index.html"],
 #page-projects .sidebar_button[href="projects.html"],
 #page-blog     .sidebar_button[href="blog.html"] {
     background-color: #ffffff;
@@ -208,8 +208,8 @@ main {
     color: #555;
 }
 
-#page-home     .sidebar_button[href="home.html"] .icons,
-.sidebar_button[href="home.html"]:hover .icons {
+#page-home     .sidebar_button[href="index.html"] .icons,
+.sidebar_button[href="index.html"]:hover .icons {
     content: url("Photos/Home dark.png");
 }
 
@@ -224,8 +224,8 @@ main {
     content: url("Photos/Blog dark.png");
 }
 
-#page-home     .sidebar_button[href="../home.html"] .icons,
-.sidebar_button[href="../home.html"]:hover .icons {
+#page-home     .sidebar_button[href="../index.html"] .icons,
+.sidebar_button[href="../index.html"]:hover .icons {
     content: url("../Photos/Home dark.png");
 }
 
