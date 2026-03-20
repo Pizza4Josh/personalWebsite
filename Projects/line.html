@@ -1,0 +1,115 @@
+<!--
+Author:     George Adams
+Date:       27.02.2026
+Message:    Why hello there! 
+-->
+
+<html>
+
+<head>
+    <title>George Adams</title>
+    <link rel="stylesheet" href="../styles.css">
+    
+</head>
+
+<body>
+    <nav class="sidebar">
+        <a href="../home.html" id="home_button" class="sidebar_button dark">
+            <img id="home_img" class="icons" src="../Photos/Home white.png" alt="Home icon">
+            HOME</a>
+        <a id="projects_button" class="sidebar_button light">
+            <img id="../projects_img" class="icons" src="../Photos/Spanner dark.png" alt="Spanner icon">
+            PROJECTS</a>
+        <a href="../blog.html" id="blog_button" class="sidebar_button dark">
+            <img id="blog_img" class="icons" src="../Photos/Blog white.png" alt="Blog icon">
+            BLOG</a>
+    </nav>
+
+    <main>
+        <h1>Line Following Robot</h1>
+        <p class="bottomMargin">University Project</p>
+
+        <div class="project-entry">
+
+            <div class="project-overview">
+                <div class="project-text">
+                    
+                    <h2>Overview</h2>
+                    <div class="project-dates">
+                        <span><strong>From:</strong> June 2024</span>
+                        <span><strong>To:</strong> November 2024</span>
+                    </div>
+                    <p>The highlight of the second year mechatronics discipline is the line following robot. This involves
+                        designing a circuit from scratch around a STM32U2 microcontroller, designing a PCB board in KiCAD,
+                        assembling it and fitting it to a custom designed chasis and drive train. The robots are raced
+                        against each other at the end of the semester, with the grade being determined by your placement.
+                    </p>
+                    <p>This was one of my favourite projects, mainly because of the freedom we had. It was the first project
+                        where we weren't hand-held, and we had to figure out which components we wanted to use, how they
+                        were going to connect, and how we would make the thing move.
+                    </p>
+                    <p>Our team had a great result, coming 12th out of 55 teams, with a track time of 18s.
+                    </p>
+                </div> 
+            </div>
+            
+            <div class="carousel">
+                <button class="carousel-arrow left" onclick="moveCarousel(-1)">&#8249;</button>
+                <button class="carousel-arrow right" onclick="moveCarousel(1)">&#8250;</button>
+
+                <div class="carousel-window">
+                    <div class="carousel-track" id="carousel-track">
+                        <img src="../Photos/line/cover.jpg" alt="Image 5" class="carousel-img" data-caption="Competition ready!">
+                        <img src="../Photos/line/img2.png" alt="Image 1" class="carousel-img" data-caption="Disasembled working system">
+                        <img src="../Photos/line/img3.png" alt="Image 2" class="carousel-img" data-caption="Track testing">
+                        <img src="../Photos/line/img4.JPG" alt="Image 3" class="carousel-img" data-caption="Bulk decouping cap added ">
+                        <img src="../Photos/line/img5.jpg" alt="Image 4" class="carousel-img" data-caption="Sensor PCB rework">
+                    </div>
+                
+                    <div class="carousel-caption" id="carousel-caption"></div>
+                    
+                </div>
+
+                
+
+                <div class="carousel-dots" id="carousel-dots"></div>
+            </div>
+
+            <div class="home-bottom">
+                <div class="list">
+                    <h2 class="smallMargin">Tools and skills</h2>
+                    <ul>
+                        <li>KiCAD to design the PCB and Schematic.</li>
+                        <li>Datasheet parsing to find component data and wiring information.</li>
+                        <li>Footprint and schematic library creation.</li>
+                        <li>Circuit debugging and PCB rework.</li>
+                    </ul>
+                </div>
+
+                <div class="list">
+                    <h2 class="smallMargin">Limitations and Improvements</h2>
+                    <ul>
+                        <li>In testing, it was found that the sensor boards weren't working properly. It was found
+                            that a connection was improperly designed, which was scratched out and properly connected
+                            with external wires (image 5).
+                        </li>
+                        <li>A bulk decoupling capacitor placed after the battery wasn't designed into the PCB board.
+                            This had to be added hackily after assembly (image 4).
+                        </li>
+                        <li>If I were to do this project again, I would design a gear based drive system instead of
+                            the hot-glue on motor which rotated the rubber wheels through friction as this was very
+                            prone to failure.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            
+
+        </div>
+    </main>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

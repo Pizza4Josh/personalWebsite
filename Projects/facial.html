@@ -1,0 +1,107 @@
+<!--
+Author:     George Adams
+Date:       27.02.2026
+Message:    Why hello there! 
+-->
+
+<html>
+
+<head>
+    <title>George Adams</title>
+    <link rel="stylesheet" href="../styles.css">
+    
+</head>
+
+<body>
+    <nav class="sidebar">
+        <a href="../home.html" id="home_button" class="sidebar_button dark">
+            <img id="home_img" class="icons" src="../Photos/Home white.png" alt="Home icon">
+            HOME</a>
+        <a id="projects_button" class="sidebar_button light">
+            <img id="../projects_img" class="icons" src="../Photos/Spanner dark.png" alt="Spanner icon">
+            PROJECTS</a>
+        <a href="../blog.html" id="blog_button" class="sidebar_button dark">
+            <img id="blog_img" class="icons" src="../Photos/Blog white.png" alt="Blog icon">
+            BLOG</a>
+    </nav>
+
+    <main>
+        <h1>Personal Recognition on Raspberry Pi</h1>
+        <p class="bottomMargin">Personal Project</p>
+
+        <div class="project-entry">
+
+            
+
+            <div class="project-overview">
+                <div class="project-text">
+                    
+                    <h2>Overview</h2>
+                    <div class="project-dates">
+                        <span><strong>From:</strong> Janurary 2026</span>
+                        <span><strong>To:</strong> Current</span>
+                    </div>
+                    <p>As part of my final year computer vision course, COSC428, we are doing a personal-directed project.
+                        After talking with my flatmates, we thought it would be great if I made a device which could sit 
+                        on the wall and play a pre-recorded message or themesong the first time they come into the kitchen.
+                    </p>
+                    <p>This system runs on a Raspberry Pi 5 and uses OpenCV for camera capture and the face-recognition
+                        python library for recognition. Five images per flatmate were converted into embeddings, and each frame
+                        of the camera is similarly converted. The system then compares the current embedding to the database,
+                        and if there is a match, it plays an audio track corresponding to the flatmate recognised.
+                    </p>
+                </div> 
+            </div>
+            
+            <div class="carousel">
+                <button class="carousel-arrow left" onclick="moveCarousel(-1)">&#8249;</button>
+                <button class="carousel-arrow right" onclick="moveCarousel(1)">&#8250;</button>
+
+                <div class="carousel-window">
+                    <div class="carousel-track" id="carousel-track">
+                        <img src="../Photos/facial/img1.jpg" alt="Image 1" class="carousel-img" data-caption="Raspberry Pi">
+                        <img src="../Photos/facial/img2.png" alt="Image 2" class="carousel-img" data-caption="System architecture">
+                    </div>
+                
+                    <div class="carousel-caption" id="carousel-caption"></div>
+                    
+                </div>
+
+                
+
+                <div class="carousel-dots" id="carousel-dots"></div>
+            </div>
+
+            <div class="home-bottom">
+                <div class="list">
+                    <h2 class="smallMargin">Tools and skills</h2>
+                    <ul>
+                        <li>Code and peripheral integration in Raspberry Pi OS.</li>
+                        <li>Computer vision systems and personal recognition.</li>
+                        <li>Cad design and 3D printing to make the mounted case.</li>
+                    </ul>
+                </div>
+
+                <div class="list">
+                    <h2 class="smallMargin">Limitations and Improvements</h2>
+                    <ul>
+                        <li>This project is still in ideation stage, but will be completed by 20th April.
+                            I thought it best to include it anyway, because it is of great interest to me.
+                        </li>
+                        <li>It would be great to have functionality to record a message and assign it
+                            to a flatmate. This is a stretch goal if the rest of the project implementation
+                            is finished early.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            
+
+        </div>
+    </main>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

@@ -21,7 +21,11 @@ h2 {
 }
 
 .bottomMargin {
-    margin-bottom: 40px;
+    margin-bottom: 60px;
+}
+
+.smallMargin {
+    margin-bottom: 20px;
 }
 
 ul {
@@ -67,7 +71,7 @@ main {
     display: flex;
     justify-content: space-between; /* left item to left edge, right item to right edge */
     align-items: flex-start;
-    gap: 20px;
+    gap: 125px;
 }
 
 .home-section {
@@ -119,9 +123,9 @@ main {
     gap: 5px;
 }
 
-.home-project-title { font-size: 16px; font-weight: bold; }
+.home-project-title { font-size: 17.5px; font-weight: bold; }
 
-.home-project-desc { font-size: 13px; color: #777; }
+.home-project-desc { font-size: 14px; color: #777; }
 
 .home-all-projects {
     font-size: 12px;
@@ -268,7 +272,7 @@ main {
 .project_button .img {
     width: 100%;
     height:80%;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
     position:absolute;
     top: 0;
@@ -321,6 +325,7 @@ main {
 .project-img-wrap {
     display: flex;
     flex-direction: column;
+    
     align-items: center;
     flex-shrink: 0;
 }
@@ -339,10 +344,13 @@ main {
     margin-top: 6px;
 }
 
+
 .list {
-    margin-bottom: 35px;
+    max-width: 350px;
     border-left: 4px solid #555555;
     padding-left: 15px;
+    text-align: left;
+    margin-bottom: 100px;
 }
 
 
@@ -362,6 +370,8 @@ main {
     overflow: hidden;
     border-radius: 10px;
     border: 2px solid #555555;
+    background-color: #555555;
+    margin-top: 25px;
 }
 
 .carousel-track {
@@ -372,7 +382,7 @@ main {
 .carousel-img {
     min-width: 100%;
     height: 500px;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
 }
 
@@ -397,6 +407,7 @@ main {
     display: flex;
     gap: 8px;
     margin-top: 12px;
+    margin-bottom: 25px;
 }
 
 .dot {

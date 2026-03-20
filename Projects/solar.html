@@ -1,0 +1,110 @@
+<!--
+Author:     George Adams
+Date:       27.02.2026
+Message:    Why hello there! 
+-->
+
+<html>
+
+<head>
+    <title>George Adams</title>
+    <link rel="stylesheet" href="../styles.css">
+    
+</head>
+
+<body>
+    <nav class="sidebar">
+        <a href="../home.html" id="home_button" class="sidebar_button dark">
+            <img id="home_img" class="icons" src="../Photos/Home white.png" alt="Home icon">
+            HOME</a>
+        <a id="projects_button" class="sidebar_button light">
+            <img id="../projects_img" class="icons" src="../Photos/Spanner dark.png" alt="Spanner icon">
+            PROJECTS</a>
+        <a href="../blog.html" id="blog_button" class="sidebar_button dark">
+            <img id="blog_img" class="icons" src="../Photos/Blog white.png" alt="Blog icon">
+            BLOG</a>
+    </nav>
+
+    <main>
+        <h1>Solar power converter for RC car</h1>
+        <p class="bottomMargin">University Project</p>
+
+        <div class="project-entry">
+
+            
+
+            <div class="project-overview">
+                <div class="project-text">
+                    
+                    <h2>Overview</h2>
+                    <div class="project-dates">
+                        <span><strong>From:</strong> June 2025</span>
+                        <span><strong>To:</strong> November 2025</span>
+                    </div>
+                    <p>As part of my Power and Analogue Electronics course, ENEL372, we did a project designing and making a 
+                        buck converter to change the variable 15.2V from a solar panel to a steady 6V to power
+                        the DC motors of an RC car.
+                    </p>
+                    <p>There was a choice to implement the system on a breadboard, or design a PCB. Naturally, as someone who
+                        loves PCBs, I took the opportunity to diversify my experience. We were able to successfully power
+                        the RC car from the solar panel and I'm super pleased with the way it turned out.
+                    </p>
+                </div> 
+            </div>
+            
+            <div class="carousel">
+                <button class="carousel-arrow left" onclick="moveCarousel(-1)">&#8249;</button>
+                <button class="carousel-arrow right" onclick="moveCarousel(1)">&#8250;</button>
+
+                <div class="carousel-window">
+                    <div class="carousel-track" id="carousel-track">
+                        <img src="../Photos/solar/Cover.jpg" alt="Image 1" class="carousel-img" data-caption="Assembled and working PCB board">
+                        <img src="../Photos/solar/img2.jpg" alt="Image 2" class="carousel-img" data-caption="Circuit testing on breadboard">
+                        <img src="../Photos/solar/img3.png" alt="Image 3" class="carousel-img" data-caption="Circuit schematic">
+                        
+                    </div>
+                
+                    <div class="carousel-caption" id="carousel-caption"></div>
+                    
+                </div>
+
+                
+
+                <div class="carousel-dots" id="carousel-dots"></div>
+            </div>
+
+            <div class="home-bottom">
+                <div class="list">
+                    <h2 class="smallMargin">Tools and skills</h2>
+                    <ul>
+                        <li>PCB design in KiCAD.</li>
+                        <li>Design of efficient and stable power converting circuitry.</li>
+                        <li>Correct placement of decoupling capacitors to ensure stable signals.</li>
+                        <li>Use of oscilloscopes and power supplies for testing and debugging.</li>
+                        <li>Reading datasheets to find correct wiring schematics and pin placements.</li>
+                        <li>Soldering for assembly.</li>
+                    </ul>
+                </div>
+
+                <div class="list">
+                    <h2 class="smallMargin">Limitations and Improvements</h2>
+                    <ul>
+                        <li>A key part of the debugging phase centered around the footprint of the TL494 (control chip)
+                            accidently being placed on the back of the board.
+                        </li>
+                        <li>The connectors between the board and the DC motors was unstable and prone to coming
+                            off when a bump was hit, these should have been replaced with spade connections.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            
+
+        </div>
+    </main>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

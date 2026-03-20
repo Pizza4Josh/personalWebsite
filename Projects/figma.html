@@ -1,0 +1,116 @@
+<!--
+Author:     George Adams
+Date:       27.02.2026
+Message:    Why hello there! 
+-->
+
+<html>
+
+<head>
+    <title>George Adams</title>
+    <link rel="stylesheet" href="../styles.css">
+    
+</head>
+
+<body>
+    <nav class="sidebar">
+        <a href="../home.html" id="home_button" class="sidebar_button dark">
+            <img id="home_img" class="icons" src="../Photos/Home white.png" alt="Home icon">
+            HOME</a>
+        <a id="projects_button" class="sidebar_button light">
+            <img id="../projects_img" class="icons" src="../Photos/Spanner dark.png" alt="Spanner icon">
+            PROJECTS</a>
+        <a href="../blog.html" id="blog_button" class="sidebar_button dark">
+            <img id="blog_img" class="icons" src="../Photos/Blog white.png" alt="Blog icon">
+            BLOG</a>
+    </nav>
+
+    <main>
+        <h1>Automatic Foosball Counter</h1>
+        <p class="bottomMargin">Personal Project</p>
+
+        <div class="project-entry">
+
+            
+
+            <div class="project-overview">
+                <div class="project-text">
+                    
+                    <h2>Overview</h2>
+                    <div class="project-dates">
+                        <span><strong>From:</strong> December 2025</span>
+                        <span><strong>To:</strong> February 2026</span>
+                    </div>
+                    <p>At my old flat, we had a foosball table (table soccer) and, as you would expect from six guys, 
+                        it became very competetive. I was looking for a project to get more hands on experience with
+                        PCB design, and I decided to make a system to automatically count the score and display it with
+                        LEDs.
+                    </p>
+                    <p>The system is made up of a power converter, lithium ion battery and arduino nano on one custom
+                        made PCB board. This has three battery level indicators, ON switch and a reset button. 
+                        Wires then connect from this board to two boards with 10 red and blue LEDs
+                        corresponding to the two teams. Breakbeam IR sensors were used to count the score, with +1 and -1/2
+                        buttons on each score keeping board.
+                    </p>
+                    <p>Unfortunately, just before I got the system fully working, 
+                        I moved to a different flat which doesn't have a foosball table! I'm currently on
+                        the lookout for another one which I can fit it to.
+                    </p>
+                </div> 
+            </div>
+            
+            <div class="carousel">
+                <button class="carousel-arrow left" onclick="moveCarousel(-1)">&#8249;</button>
+                <button class="carousel-arrow right" onclick="moveCarousel(1)">&#8250;</button>
+
+                <div class="carousel-window">
+                    <div class="carousel-track" id="carousel-track">
+                        <img src="../Photos/foosball/img1.JPG" alt="Image 1" class="carousel-img" data-caption="3D printed case for the control board">
+                        <img src="../Photos/foosball/img2.JPG" alt="Image 2" class="carousel-img" data-caption="Score board connected and working">
+                        <img src="../Photos/foosball/img3.JPG" alt="Image 3" class="carousel-img" data-caption="IR sensors counting score">
+                        <img src="../Photos/foosball/img4.JPG" alt="Image 4" class="carousel-img" data-caption="PCB rework!">
+                        <img src="../Photos/foosball/img5.JPG" alt="Image 5" class="carousel-img" data-caption="Desinging on KiCAD">
+                        
+                    </div>
+                
+                    <div class="carousel-caption" id="carousel-caption"></div>
+                    
+                </div>
+
+                
+
+                <div class="carousel-dots" id="carousel-dots"></div>
+            </div>
+
+            <div class="home-bottom">
+                <div class="list">
+                    <h2 class="smallMargin">Tools and skills</h2>
+                    <ul>
+                        <li>KiCAD to design the PCB and Schematic </li>
+                        <li>Multimeter and power supplies to debug the circuit</li>
+                        <li>Soldering iron to connect components</li>
+                        <li>Arduino IDE to program the system</li>
+                    </ul>
+                </div>
+
+                <div class="list">
+                    <h2 class="smallMargin">Limitations and Improvements</h2>
+                    <ul>
+                        <li>Have not yet been able to fit the system to a table and do in-place testing</li>
+                        <li>Small error in PCB design, didn't connect LEDs 9 and 10 (image 3)</li>
+                        <li>I wasn't able to easily find the right connector for the battery converter.
+                         I desoldered it and replaced it with a standard 2 pin JST which proved to be unreliable.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            
+
+        </div>
+    </main>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

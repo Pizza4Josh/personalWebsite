@@ -1,0 +1,113 @@
+<!--
+Author:     George Adams
+Date:       27.02.2026
+Message:    Why hello there! 
+-->
+
+<html>
+
+<head>
+    <title>George Adams</title>
+    <link rel="stylesheet" href="../styles.css">
+    
+</head>
+
+<body>
+    <nav class="sidebar">
+        <a href="../home.html" id="home_button" class="sidebar_button dark">
+            <img id="home_img" class="icons" src="../Photos/Home white.png" alt="Home icon">
+            HOME</a>
+        <a id="projects_button" class="sidebar_button light">
+            <img id="../projects_img" class="icons" src="../Photos/Spanner dark.png" alt="Spanner icon">
+            PROJECTS</a>
+        <a href="../blog.html" id="blog_button" class="sidebar_button dark">
+            <img id="blog_img" class="icons" src="../Photos/Blog white.png" alt="Blog icon">
+            BLOG</a>
+    </nav>
+
+    <main>
+        <h1>Gyroscope controlled RC car</h1>
+        <p class="bottomMargin">University Project</p>
+
+        <div class="project-entry">
+
+            
+
+            <div class="project-overview">
+                <div class="project-text">
+                    
+                    <h2>Overview</h2>
+                    <div class="project-dates">
+                        <span><strong>From:</strong> Feburary 2026</span>
+                        <span><strong>To:</strong> Current</span>
+                    </div>
+                    <p>As part of my ENCE461 course, we are desinging a set of two PCB boards. One with a
+                        gyroscope to go on a hat, and the other with an H-bridge to go on a RC car. 
+                        The goal of the project is to get the RC car to move based on the position of
+                        the hat and is assesed in a race between students.
+                    </p>
+                    <p>Each board features 5V buck converters, two linear voltage regulators, a SAM4S
+                        microcontroller and a nRF24 radio.
+                    </p>
+                    <p>Till now, we have designed the schematics and PCB boards in Altium and are
+                        currently waiting for them to be manufacutred before we start assembly. I'm
+                        super excited to get them working and begin programming the movement!
+                    </p>
+                </div> 
+            </div>
+            
+            <div class="carousel">
+                <button class="carousel-arrow left" onclick="moveCarousel(-1)">&#8249;</button>
+                <button class="carousel-arrow right" onclick="moveCarousel(1)">&#8250;</button>
+
+                <div class="carousel-window">
+                    <div class="carousel-track" id="carousel-track">
+                        <img src="../Photos/wacky/img2.jpg" alt="Image 2" class="carousel-img" data-caption="PCB Design">
+                        <img src="../Photos/wacky/img1.jpg" alt="Image 1" class="carousel-img" data-caption="Schematic">
+                    </div>
+                
+                    <div class="carousel-caption" id="carousel-caption"></div>
+                    
+                </div>
+
+                
+
+                <div class="carousel-dots" id="carousel-dots"></div>
+            </div>
+
+            <div class="home-bottom">
+                <div class="list">
+                    <h2 class="smallMargin">Tools and skills</h2>
+                    <ul>
+                        <li>Altium designer to create schematic and PCB design.</li>
+                        <li>Component selection and wiring information parsed from datasheets.</li>
+                        <li>Teamwork collaboration and task delegation.</li>
+                    </ul>
+                </div>
+
+                <div class="list">
+                    <h2 class="smallMargin">Limitations and Improvements</h2>
+                    <ul>
+                        <li>The largest limitation is that the project hasn't been completed yet.
+                            I thought I should include it anyway because it is already one of
+                            my all-time favourites.
+                        </li>
+                        <li>The CLK, MISO and MOSI lines run parellel and close together from
+                            the MCU to the radio, most likely inducing a significant amount of cross talk.
+                            This would be fixed by observing the 3W rule - which I will be doing from now on!
+                        </li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+
+            
+
+        </div>
+    </main>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

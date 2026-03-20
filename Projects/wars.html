@@ -26,22 +26,33 @@ Message:    Why hello there!
     </nav>
 
     <main>
-        <h1>Automatic Foosball Counter</h1>
-        <p class="bottomMargin">Personal Project</p>
+        <h1>Weeding Automatic Robotic System (WARS)</h1>
+        <p class="bottomMargin">Internship / Capstone Project</p>
 
         <div class="project-entry">
-
-            
-
             <div class="project-overview">
                 <div class="project-text">
                     
                     <h2>Overview</h2>
                     <div class="project-dates">
-                        <span><strong>Start:</strong> January 2026</span>
-                        <span><strong>End:</strong> February 2026</span>
+                        <span><strong>From:</strong> November 2025</span>
+                        <span><strong>To:</strong> Current</span>
                     </div>
-                    <p>Write your project overview here. Describe what the project is, why you built it, and what it does.</p>
+                    <p>Over the 2025-2026 summer, I was fortunate enough to get a callaghan funded internship developing
+                        a weeding robot for Plant Research Limited (PRL). I am now continuing working on it
+                        as a final year project (capstone).
+                    </p> <p>
+                        It features a central intel NUC 
+                        and Arduino Mega controlling motors, valves, solenoids through ROS. It features both manual control and 
+                        a map setting function which the robot autonomosly follows, detecting weeds and precicely spraying them
+                        with servo-controlled spray arms.
+                    </p> <p>
+                        This is a large scale colloborative project which began development in 2021.
+                        The contributions I have made to the system include designing and implementing the
+                        control website, improvement of the navigation and path following capabilities, and
+                        implementing a computer vision model to track crop rows and align the robot within them.
+                        
+                    </p>
                 </div>
             </div>
             
@@ -51,11 +62,12 @@ Message:    Why hello there!
 
                 <div class="carousel-window">
                     <div class="carousel-track" id="carousel-track">
-                        <img src="../Photos/foosball/img1.JPG" alt="Image 1" class="carousel-img" data-caption="case">
-                        <img src="../Photos/foosball/img2.JPG" alt="Image 2" class="carousel-img" data-caption="sdfs">
-                        <img src="../Photos/foosball/img3.JPG" alt="Image 3" class="carousel-img" data-caption="other thing">
-                        <img src="../Photos/foosball/img4.JPG" alt="Image 4" class="carousel-img" data-caption="om mani padme hum">
-                        <img src="../Photos/foosball/img5.JPG" alt="Image 5" class="carousel-img" data-caption="om vajra satva hung">
+                        <img src="../Photos/wars/cover.jpg" alt="Image 1" class="carousel-img" data-caption="Robot at PRLs test site">
+                        <img src="../Photos/wars/img1.PNG" alt="Image 2" class="carousel-img" data-caption="Robot with the GPS reciever module">
+                        <img src="../Photos/wars/img2.png" alt="Image 3" class="carousel-img" data-caption="Computer vision model detecting pea rows">
+                        <img src="../Photos/wars/img3.PNG" alt="Image 4" class="carousel-img" data-caption="Robot navigating from computer vision model">
+                        <img src="../Photos/wars/img4.png" alt="Image 5" class="carousel-img" data-caption="Path display on website">
+                        <img src="../Photos/wars/img5.png" alt="Image 6" class="carousel-img" data-caption="Manual and path setting mode">
                         
                     </div>
                 
@@ -69,31 +81,30 @@ Message:    Why hello there!
             </div>
 
 
-            <div class="list">
-                <h2>Tools Used</h2>
-                <ul>
-                    <li>Tool one</li>
-                    <li>Tool two</li>
-                    <li>Tool three</li>
-                </ul>
-            </div>
+            <div class="home-bottom">
+                <div class="list">
+                    <h2 class="smallMargin">Tools and skills</h2>
+                    <ul>
+                        <li>Ubuntu and ROS. Rebuilt the system from Python 2, ROS melodic and Ubuntu 18.04
+                            to 3.6, Noetic and 20.04.
+                        </li>
+                        <li>Deep learning system data collection, training and integration using YOLO.</li>
+                        <li>Structured test regeime creation and execution.</li>
+                        <li>Communication with clients of non-engineering backgrounds.</li>
+                        <li>Leadership, team management and collaboration</li>
+                    </ul>
+                </div>
 
-            <div class="list">
-                <h2>Skills Learnt</h2>
-                <ul>
-                    <li>Skill one</li>
-                    <li>Skill two</li>
-                    <li>Skill three</li>
-                </ul>
-            </div>
-
-            <div class="list">
-                <h2>Limitations and Possible Improvements</h2>
-                <ul>
-                    <li>Improvement one</li>
-                    <li>Improvement two</li>
-                    <li>Improvement three</li>
-                </ul>
+                <div class="list">
+                    <h2 class="smallMargin">Limitations and Improvements</h2>
+                    <ul>
+                        <li>The robot uses glyphosate which is proven to have adverse enviornmental
+                            and health impacts.
+                        </li>
+                        <li>Spray system currently at 70% accuracy, currently being improved.</li>
+                        <li>Navigational PID systems cause >100mm deviation, currently being improved. </li>
+                    </ul>
+                </div>
             </div>
 
         </div>
